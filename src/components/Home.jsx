@@ -9,7 +9,7 @@ const Home = () => {
     <div className='max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full'>
         <p className='text-pink-600 font-bold'>Hi, my name is </p>
         <h1 className='text-4xl sm:text-7xl font-bold text-[#ccd6f6]'>Edmond Fagbuyi</h1>
-        <h2 className='text-4xl sm:text-7xl font-bold text-[#8892b0]'>I'm a Cloud and Web Developer</h2>
+        <h2 className='text-4xl sm:text-7xl font-bold text-[#8892b0]'>I'm a Cloud Solutions Architect and Web Developer</h2>
         <p className='text-[#8892b0] py-4 max-w-[700px]'>A highly skilled and dedicated Cloud and Web Developer with almost 3 years of experience in developing
 scalable and robust web applications. Seeking a challenging position to utilize my expertise in front
 end and back end development, database manage ment, and problem solving to contribute to the
