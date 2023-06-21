@@ -1,12 +1,28 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {HiArrowNarrowRight} from 'react-icons/hi'
+import {BsFillMoonStarsFill } from 'react-icons/bs'
+
+
 
 const Home = () => {
+
+  const [whiteMode, setWhiteMode] = useState(false)
+
+
+
   return (
-    <div name='home' className= 'w-full h-screen bg-[#0a192f]'>
+ 
+    <div className={whiteMode ? "white" : ""}>
+    <div name='home' className= 'w-full h-screen bg-[#0a192f] white:bg-white]'>
+   
 
     {/* Container */}
     <div className='max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full'>
+    <ul>
+      
+      <li><BsFillMoonStarsFill onClick={ () => setWhiteMode(!whiteMode)} className='cursor-pointer text-xl'/></li>
+      </ul>
+    
         <p className='text-pink-600 font-bold'>Hi, my name is </p>
         <h1 className='text-4xl sm:text-7xl font-bold text-[#ccd6f6]'>Edmond Fagbuyi</h1>
         <h2 className='text-4xl sm:text-7xl font-bold text-[#8892b0]'>I'm a Cloud Solutions Architect and Web Developer</h2>
@@ -19,10 +35,10 @@ success of a dynamic organization. Highly motivated to learn new conc ept and te
         <span className='group-hover:rotate-90  duration-300'><HiArrowNarrowRight className='ml-3'/></span>
     </button>
     </div>
-    
-
-
+  
 </div>
+</div>
+
   )
 }
 

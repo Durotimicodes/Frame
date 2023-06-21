@@ -11,7 +11,8 @@ import Tailwind from '../assests/tailwind.png';
 import Mongo from '../assests/mongo.png';
 import Postgresql from '../assests/Postgresql_elephant.png';
 import Mysql from '../assests/MySQL-Logo.png';
-import AWS from '../assests/aws.png'
+import AWS from '../assests/aws.png';
+import Terraform from '../assests/Terraform1.png';
 
 
 
@@ -74,6 +75,10 @@ const Skills = () => {
               <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
                   <img className='w-20 mx-auto' src={Mysql} alt="HTML icon" />
                   <p className='my-4'>MYSQL</p>
+              </div>
+              <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
+                  <img className='w-20 mx-auto' src={Terraform} alt="HTML icon" />
+                  <p className='my-4'>TERRAFORM</p>
               </div>
               
           </div>
