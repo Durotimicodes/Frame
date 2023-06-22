@@ -1,27 +1,23 @@
-import React, { useState } from 'react'
+import {React, useState } from 'react'
 import {HiArrowNarrowRight} from 'react-icons/hi'
-import {BsFillMoonStarsFill } from 'react-icons/bs'
+
 
 
 
 const Home = () => {
-
-  const [whiteMode, setWhiteMode] = useState(false)
-
-
+  const [theme, setTheme] = useState("dark")
+const toogleTheme = () => {
+  setTheme((currentTheme) => (currentTheme === "light" ? "dark" : "light"))
+}
 
   return (
  
-    <div className={whiteMode ? "white" : ""}>
-    <div name='home' className= 'w-full h-screen bg-[#0a192f] white:bg-white]'>
+    <div name='home' className='w-full h-screen bg-[#0a192f] white:bg-white]' id={theme} onChange={toogleTheme}>
    
 
     {/* Container */}
     <div className='max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full'>
-    <ul>
-      
-      <li><BsFillMoonStarsFill onClick={ () => setWhiteMode(!whiteMode)} className='cursor-pointer text-xl'/></li>
-      </ul>
+    
     
         <p className='text-pink-600 font-bold'>Hi, my name is </p>
         <h1 className='text-4xl sm:text-7xl font-bold text-[#ccd6f6]'>Edmond Fagbuyi</h1>
@@ -36,7 +32,6 @@ success of a dynamic organization. Highly motivated to learn new conc ept and te
     </button>
     </div>
   
-</div>
 </div>
 
   )

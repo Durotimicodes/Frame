@@ -4,13 +4,27 @@ import About from "./components/About";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
-import {BsFillMoonStarsFill} from 'react-icons/bs'
+import "./index.css";
+import { createContext, useState } from "react";
+
+
+
+export const ThemeContext = createContext(null)
+
+
 
 
 function App() {
 
+  const [theme, setTheme] = useState("dark")
+  const toogleTheme = () => {
+    setTheme((currentTheme) => (currentTheme === "light" ? "dark" : "light"))
+  }
+
+
   return (
-    <div>
+    <ThemeContext.Provider value={{ theme, toogleTheme }}>
+    <div id={theme}>
     <Navbar/>
     <Home/>
     <About/>
@@ -18,6 +32,7 @@ function App() {
     <Projects/>
     <Contact/>
     </div>
+    </ThemeContext.Provider>
   );
 }
 
