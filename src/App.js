@@ -6,6 +6,8 @@ import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import "./index.css";
 import { createContext, useState } from "react";
+import ReactSwitch from 'react-switch'
+
 
 
 
@@ -16,6 +18,7 @@ export const ThemeContext = createContext(null)
 
 function App() {
 
+
   const [theme, setTheme] = useState("dark")
   const toogleTheme = () => {
     setTheme((currentTheme) => (currentTheme === "light" ? "dark" : "light"))
@@ -24,9 +27,16 @@ function App() {
 
   return (
     <ThemeContext.Provider value={{ theme, toogleTheme }}>
-    <div id={theme}>
+    
+    <div id={theme} className="bg-white text-black">
     <Navbar/>
     <Home/>
+    <div className="switch" >
+    <ul>
+    <li>Switch</li>
+    <li> <ReactSwitch onChange={toogleTheme} checked={ theme === "light"} /></li>
+    </ul>
+    </div>
     <About/>
     <Skills/>
     <Projects/>

@@ -10,10 +10,10 @@ const Projects = () => {
     //setProject(data);
   
   return (
-    <div name='projects' className='w-full md:h-screen text-gray-300 bg-[#0a192f]'>
+    <div name='projects' className='w-full md:h-screen'>
       <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full'>
         <div className='pb-8'>
-          <p className='text-4xl font-bold inline border-b-4 text-gray-300 border-pink-600'>
+          <p className='text-4xl font-bold inline border-b-4 border-pink-600'>
             Projects
           </p>
           <p className='py-6'>Check out some of my recent projects</p>
@@ -32,7 +32,7 @@ const Projects = () => {
   >
     {/* Hover effect for images */}
     <div className="opacity-0 group-hover:opacity-100 ">
-      <span className="text-2xl font bold text-white tracking-wider ">
+      <span className="text-2xl font bold tracking-wider ">
         {item.name}
       </span>
       <div className="pt-8 text-center ">
@@ -40,7 +40,7 @@ const Projects = () => {
         <a href={item.github} target="_blank">
           <button
             className="text-center rounded-lg px-4 py-3 m-2
-                       bg-white text-gray-700 font-bold text-lg"
+                       bg-white font-bold text-lg"
           >
             Code
           </button>
@@ -49,7 +49,7 @@ const Projects = () => {
         <a href={item.live} target="_blank">
           <button
             className="text-center rounded-lg px-4 py-3 m-2
-                       bg-white text-gray-700 font-bold text-lg"
+                       bg-white font-bold text-lg"
           >
             Live
           </button>
